@@ -1,5 +1,6 @@
 body > header {
   background-color: var(--header-bg-color);
+  background: linear-gradient(to right, #59c173, #a17fe0, #5d26c1);
   color: var(--header-fg-color);
   fill: var(--header-fg-color);
 
@@ -70,4 +71,3 @@ body > header {
     }
   }
 }
-
