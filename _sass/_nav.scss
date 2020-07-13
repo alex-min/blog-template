@@ -63,6 +63,7 @@ body > header {
   .secondary {
     background-color: var(--secondary-bg-color);
     justify-content: center;
+    min-height: 50px;
 
     a {
       color: var(--secondary-fg-color);

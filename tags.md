@@ -5,7 +5,7 @@
 <section class="tag-list">
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
-  {% if tag[1].size > 1 %}
+  {% if tag[0].size > 1 %}
     <hr />
     {% assign id = tag[0] | replace: ' ', '-' %}
     <a href="#{{ id }}"><h2 id="{{ id }}">#{{ tag[0] }}</h2></a>
