@@ -38,9 +38,8 @@ layout: default
 {% include license.html %}
 {% include social.html %}
 
-<h2 class="up-next">Up Next</h2>
-
 {% if page.next %}
+<h2 class="up-next">Up Next</h2>
 {% unless page.next.hidden %}
 {% include featured.html post=page.next %}
 {% endunless %}

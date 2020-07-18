@@ -2,21 +2,18 @@ title: "Alex-min's tech blog"
 description: "We design and develop the fast, open, and privacy-respecting replacement for Windows and macOS"
 permalink: /:title/
 theme-color: "#64baff"
-gravatar: eaa3cc978770998ea2bd4382935bf0f4
+gravatar: fcd81f0d7784b4eaebe0c845eed08eaf
 
-facebook: elementaryos
-mastodon: elementary
-reddit: elementaryos
-twitter: elementary
+author: Alex-Min
 
 authors:
   alex-min:
     name: Alex-Min
-    description: "Full-Stack Engineer"
-    gravatar: ac2ee6a8aeed69ab159f1f0c548a1992
+    description: "Software Enthusiast"
+    gravatar: fcd81f0d7784b4eaebe0c845eed08eaf
   anonymous:
     name: "Unknown Author"
-    gravatar: ac2ee6a8aeed69ab159f1f0c548a1992
+    gravatar: fcd81f0d7784b4eaebe0c845eed08eaf
 
 plugins:
   - jekyll-feed
