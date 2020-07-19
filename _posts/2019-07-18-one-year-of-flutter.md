@@ -12,7 +12,7 @@ I spent a considerable time on my [budget app](https://mavio.fr) side project bu
 
 ## The Dart language
 
-Flutter is built with Dart, a Javascript/Java inspired language. Dart was built internally at Google with the specific goal to replace Javascript on the web as a saner language, with better defaults. Unfortunately for the Dart team, the project never took off, Dart was stuck in a limbo state for a few years while being maintained for internal Google needs.
+Flutter is built with Dart, a Javascript/Java inspired language. Dart was built internally at Google with the specific goal to replace Javascript on the web as a saner language, with better defaults. Unfortunately for the Dart team, the project never took off, Dart was stuck in a limbo state for a few years while still being maintained for internal Google needs.
 
 The language itself had very good features which enabled other uses cases:
  - The Dart VM is a wonderful piece of technology, build with hot reloading at its core
@@ -54,11 +54,22 @@ The SDK is quite complete, a lot of basic and complex components are there. The 
 
 While you can make your application look native with more work but generally it's not what you would use Flutter for. Flutter shines primarily as building complex apps which have their own design goals.
 
+
+### Styling
+
+Styling will look familiar if you are coming from a web background. You will have a stripped-down version of flex, padding & margins, border-radius, font-weight...
+
+The main difference being that there's a global Flutter theme which applies to your whole app instead of classes. This makes it easier to swap the theme to make a dark theme.
+
+I'm still trying to make my stying code looks nicer, extending the main theme seems to be the right approach.
+
+
 ## The parts which would need improvements
 
 ### Testing
 
 Testing isn't that bad, especially if you are coming from the Javascript world. A lot of the testing building blocks you expect are there and you do have a driver where you can tap on elements and see what happens.
+
 
 <figure class="screenshot" markdown="1">
 
@@ -84,6 +95,6 @@ Additionally, this alpha-state Webview is only available on Android and iOS, not
 
 ## Conclusion
 
-As far as the Flutter platform goes, it's been a pretty enjoyable experience for me. I will write one or more blog post on retrospectives on this project. I do recommend Flutter and even as a web developper, where you might prefer React Native initially due to the familiarity with Javascript, I would recommend trying Flutter, it will surprise you. 
+As far as the Flutter platform goes, it's been a pretty enjoyable experience for me. I will write one or more retrospective blog post on this project. I do recommend Flutter and even as a web developer, where you might prefer React Native initially due to the familiarity with Javascript, I would recommend trying Flutter, it will surprise you. 
 
 
