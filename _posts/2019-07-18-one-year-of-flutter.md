@@ -8,7 +8,7 @@ tags:
   - tech
 ---
 
-I spent a considerable time on my [budget app](https://mavio.fr) side project built in Flutter. After a year of development and 25k lines of code later, I wanted to create a blog post about how everything went and my feedback on working with this framework.
+I spent a considerable time on my [personal finance app](https://mavio.fr) side project built in Flutter. After a year of development and 25k lines of code later, I wanted to create a blog post about how everything went and my feedback on working with this framework.
 
 ## The Dart language
 
@@ -36,13 +36,13 @@ The language server in VSCode works perfectly, autocompletion also works wonders
 
 ### Performance & Animations
 
-Flutter uses Skia, an internal and very performant render engine which draws everything to a canvas. Performance is definitely a strong point of the platform. I use a very cheap Samsung J3 as my daily driver which is almost the bottom of the barrel in terms of performance in 2020. Basically every app on my phone is lagging noticeably, including Google apps. My budget app on the other hand is the quickest app on my phone, by a long margin. If you are targetting a market with a lot of low-end budget phones, Flutter is exactly what you need.
+Flutter uses Skia, an internal and very performant render engine which draws everything to a canvas. Performance is definitely a strong point of the platform. I use a very cheap Samsung J3 as my daily driver which is almost the bottom of the barrel in terms of performance in 2020. Basically every app on my phone is lagging noticeably, including Google apps. My flutter app on the other hand is the quickest app on my phone, by a long margin. If you are targetting a market with a lot of low-end budget phones, Flutter is exactly what you need.
 
 Animations are also a very strong point of this platform, high-speed animations can be built with [Rive](https://rive.app/) and imported directly into Flutter, rendered at full speed and weighting a few Kb. I do have a few toy animations built with Rive on my app.
 
 ### Portability
 
-I have not published the iOS version yet due to Apple developer account issues but my budget app already works without much effort identically on Android, Linux, Windows & macOS thanks to [Hover](https://github.com/go-flutter-desktop/hover).
+I have not published the iOS version yet due to Apple developer account issues but my flutter app already works without much effort identically on Android, Linux, Windows & macOS thanks to [Hover](https://github.com/go-flutter-desktop/hover).
 
 If you are building a desktop app, Flutter can be a good technology to keep in mind. It produces small binaries, fast and reactive applications, works cross-platform and won't use too much RAM like most Electron apps.
 
