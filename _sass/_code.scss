@@ -14,10 +14,9 @@ code {
 
   > .highlight {
     border-radius: 0.25em;
-    box-shadow:
-      0 0 0 1px rgba(0, 0, 0, 0.05),
-      0 3px 3px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.22);
     line-height: 1;
+    max-width: 100%;
   }
 }
 
@@ -33,10 +32,9 @@ code {
 }
 
 .rouge-code {
-  padding-left: 0.25em;
-  padding-right: 1em;
+  padding-left: 1em;
+  padding-right: 3em;
 }
-
 
 .highlight {
   display: inline-block;
@@ -52,6 +50,7 @@ code {
     background-color: var(--solarized-base2);
     padding: 0 0.5em;
     text-align: right;
+    border-right: 1px solid #3e3f39;
   }
 
   .c,
@@ -59,6 +58,10 @@ code {
   .cm,
   .sb {
     color: var(--solarized-base1);
+  }
+
+  .n {
+    color: #62d1e0;
   }
 
   .err,
@@ -70,7 +73,6 @@ code {
   .gt,
   .l,
   .ld,
-  .n,
   .na,
   .nl,
   .nn,
@@ -111,7 +113,7 @@ code {
   .vc,
   .vg,
   .vi {
-    color: var(--solarized-blue);
+    color: #d22626;
   }
 
   .cp,
@@ -152,45 +154,5 @@ code {
 
   .gs {
     font-weight: bold;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .highlight {
-    background-color: var(--solarized-base03);
-    color: var(--solarized-base1);
-
-    .gl {
-      background-color: var(--solarized-base02);
-    }
-
-    .c,
-    .c1,
-    .cm,
-    .sb {
-      color: var(--solarized-base01);
-    }
-
-    .err,
-    .g,
-    .ge,
-    .go,
-    .gp,
-    .gs,
-    .gt,
-    .l,
-    .ld,
-    .n,
-    .na,
-    .nl,
-    .nn,
-    .nx,
-    .p,
-    .py,
-    .sd,
-    .sh,
-    .w {
-      color: var(--solarized-base1);
-    }
   }
 }
