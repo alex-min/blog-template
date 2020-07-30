@@ -2,7 +2,7 @@
 title: Automating Play Store screenshots in Flutter
 description: description 
 author: alex-min
-image: /images/logo_flutter.png
+image: /images/screenshot-generation.png
 tags:
   - flutter
   - tech
