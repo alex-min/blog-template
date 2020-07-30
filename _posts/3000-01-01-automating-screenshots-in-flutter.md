@@ -29,7 +29,7 @@ static const supportedLanguages = ["en", "fr", "ru", "vi", "de", "es", "pt"];
 }
 ```
 
-The application then boots, loops into each supported language and supported currency per language, goes into each screen and creates a screenshot. The whole operation takes about 5 min for the 70 screenshots to generate.
+The screenshot script then boots the application, loops into each supported language and supported currency per language, goes into each screen and creates a screenshot. The whole operation takes about 5 min for the 70 screenshots to generate.
 
 <figure class="screenshot" markdown="1">
 
@@ -95,5 +95,77 @@ And now the result we were waiting for...
 
 Uploading those screenshots to the Play Store is also a tedious task by itself, you need to go to each locale and add the screenshots one by one, I was sure we could do better.
 
-Google provides an access to the Google Play Store api, although it's much more limited than the actual Play Store in the browser, it's enough for our needs.
+Google provides an access to the Google Play Store api, although it's much more limited than the actual Play Store in the browser, it's enough for my needs.
+
+```typescript
+import { google } from 'googleapis';
+
+const packageName = "fr.mavio";
+const androidpublisher = google.androidpublisher("v3");
+
+const auth = new google.auth.GoogleAuth({ scopes: ['https://www.googleapis.com/auth/androidpublisher'], });
+const authClient = await auth.getClient();
+google.options({ auth: authClient });
+
+const { id: editId } = (await androidpublisher.edits.insert({ packageName })).data;
+```
+
+Now we've connected to the Google API and created a draft version (called "edit") of our data. This API works in two steps, you make all the changes you want to the edit and then you commit the new data, similar to source control.
+
+It's now time to actually send the screenshots.
+
+
+```typescript
+import * as fs from 'fs';
+
+const googleLanguageToMavioMapping = {
+    'en-US': 'en',
+    'fr-FR': 'fr',
+    'ru-RU': 'ru',
+    'pt-PT': 'pt',
+    'es-ES': 'es',
+    'de-DE': 'de',
+    'vi': 'vi',
+};
+const screenPath = `${__dirname}/../store-screenshots/generated/pixel3-root-`;
+for (let language in googleLanguageToMavioMapping) {
+    let file: fs.ReadStream;
+    const mavioLanguage = googleLanguageToMavioMapping[language];
+    var screens = ['accounts', 'stats', 'transaction', 'home', 'statspage'];
+    for (var i = 0; i < screens.length; i++) {
+        let type = screens[i];
+        console.log(`uploading ${type} image screenshot for ${language}`);
+
+        let currency = defaultCurrencyForLocale[language] || 'EUR';
+        file = fs.createReadStream(`${screenPath}${type}-${mavioLanguage}|${currency}.png`);
+        await androidpublisher.edits.images.upload({
+            editId,
+            packageName,
+            language,
+            imageType: 'phoneScreenshots',
+            media: {
+                mimeType: "image/png",
+                body: file
+            }
+        });
+    }
+}
+```
+
+A few minutes later...
+
+<figure class="screenshot" markdown="1">
+
+![An screenshot of the Google Play Store. Seven languages are displayed and there is a list of phone screenshots for the current one selected.](/images/play-store-i18n.png)
+
+<figcaption>The end result on the Play Store</figcaption>
+</figure>
+
+Here you go! All the captures for all the locales are now on the Google Play Store.
+
+# Conclusion
+
+Automating screenshots generation for my app was a fun project. Doing everything manually becomes impossible when you have a few languages. Another benefit of the automation is that I can keep the Play Store up to date with any change I'm making in the app.
+
+That happened to me once already, I've redesigned one of the statistics pages. Instead of spending a few hours to make the screenshots again for this page for each locale and currency, I've just ran the tools and everything was up to date once again!
 
