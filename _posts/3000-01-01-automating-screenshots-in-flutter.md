@@ -8,11 +8,11 @@ tags:
   - tech
 ---
 
-After adding support for seven languages to my [personal finance app](https://mavio.fr), I very quickly discovered that making Play Store screenshots manually was just unworkable anymore. Every locale needs five or six screenshots and each screenshot needs additional text in their language. Additionally, I would have to do all of this tedious work again whenever I change anything significant to one of the views, some automated solution was necessary.
+After adding support for seven languages to my [personal finance app](https://mavio.fr), I very quickly discovered that making Play Store screenshots manually was just unworkable anymore. Every locale needs five or six screenshots and each screenshot needs to be in the right language. Additionally, I would have to do all of this tedious work again whenever I change anything significant to one of the views, some automated solution was necessary.
 
 # Automating screenshots
 
-I used the Flutter ["screenshots"](https://pub.dev/packages/screenshots) package. To generate better screenshots, I used a demo SQLite database full of random transactions and I also fixed the time for the financial statistics pages to look similar months after months.
+I used the Flutter ["screenshots"](https://pub.dev/packages/screenshots) package. To generate better screenshots, I used a demo SQLite database full of random transactions and I also fixed the clock time for the financial statistics pages to look similar months after months.
 
 ```dart
 Config.clock = Clock.fixed(DateTime.parse('2019-06-07T04:34:10.958Z'));
@@ -22,11 +22,7 @@ Config.dbFilename = "https://.../demo.db"; // remotely fetching a demo database
 The database is then downloaded at boot, copied into the application folder, this configuration clock is used everywhere time is gathered on the app.
 
 ```dart
-class Config {
-// [...]
 static const supportedLanguages = ["en", "fr", "ru", "vi", "de", "es", "pt"];
-// [...]
-}
 ```
 
 The screenshot script then boots the application, loops into each supported language and supported currency per language, goes into each screen and creates a screenshot. The whole operation takes about 5 min for the 70 screenshots to generate.
@@ -43,7 +39,7 @@ The screenshot script then boots the application, loops into each supported lang
 I've created a second script which then takes the raw screenshots and transforms them into something nicer.
 Using a headless browser was a quick and easy option.
 
-It was very easy to generate the view I wanted by changing a few lines of css and the dynamic items (like the i18n text and the capture) could be replaced at runtime.
+It was very easy to generate the kind of appearance I wanted by changing a few lines of css and the dynamic items (like the i18n text and the capture) could be replaced at runtime.
 
 ```typescript
 const browser = await puppeteer.launch({ headless: true });
@@ -84,7 +80,7 @@ And now the result we were waiting for...
 
 <figure class="screenshot" markdown="1">
 
-![Exactly the same screen as before, except everything is now in French.](/images/mavio-stats-fr.png)
+![Exactly the same screen as before, except everything is now in French instead of English.](/images/mavio-stats-fr.png)
 
 <figcaption>Also works for any supported language!</figcaption>
 </figure>
@@ -95,7 +91,7 @@ And now the result we were waiting for...
 
 Uploading those screenshots to the Play Store is also a tedious task by itself, you need to go to each locale and add the screenshots one by one, I was sure we could do better.
 
-Google provides an access to the Google Play Store api, although it's much more limited than the actual Play Store in the browser, it's enough for my needs.
+Google provides an access to the Google Play Store api, although it's much more limited than the actual Play Store in the browser, it's good enough for my needs.
 
 ```typescript
 import { google } from 'googleapis';
@@ -152,20 +148,20 @@ for (let language in googleLanguageToMavioMapping) {
 }
 ```
 
-A few minutes later...
+A few minutes of file upload later...
 
 <figure class="screenshot" markdown="1">
 
 ![An screenshot of the Google Play Store. Seven languages are displayed and there is a list of phone screenshots for the current one selected.](/images/play-store-i18n.png)
 
-<figcaption>The end result on the Play Store</figcaption>
+<figcaption>The end result as seen on the Play Store</figcaption>
 </figure>
 
 Here you go! All the captures for all the locales are now on the Google Play Store.
 
 # Conclusion
 
-Automating screenshots generation for my app was a fun project. Doing everything manually becomes impossible when you have a few languages. Another benefit of the automation is that I can keep the Play Store up to date with any change I'm making in the app.
+Automating screenshots generation for my app was a fun project. Doing everything manually becomes impossible when you support a few languages. Another benefit of the automation is that I can keep the Play Store up to date with any change I'm making in the app.
 
 That happened to me once already, I've redesigned one of the statistics pages. Instead of spending a few hours to make the screenshots again for this page for each locale and currency, I've just ran the tools and everything was up to date once again!
 
