@@ -128,3 +128,12 @@ pre {
 .medium-zoom-overlay {
   background: var(--bg-color) !important;
 }
+
+@media (prefers-color-scheme: dark) {
+  .commento-root textarea {
+    height: 128px;
+    background: #272822;
+    border: 1px solid #555573;
+    color: white;
+  }
+}
