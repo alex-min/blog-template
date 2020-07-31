@@ -1,6 +1,6 @@
 ---
 title: Automating Play Store screenshots in Flutter
-description: description 
+description: from a raw screenshot to the Play Store 
 author: alex-min
 image: /images/screenshot-generation.png
 tags:
