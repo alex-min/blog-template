@@ -130,7 +130,7 @@ pre {
 }
 
 @media (prefers-color-scheme: dark) {
-  .commento-root textarea {
+  .commento-root textarea#commento-textarea-root {
     height: 128px;
     background: #272822;
     border: 1px solid #555573;
