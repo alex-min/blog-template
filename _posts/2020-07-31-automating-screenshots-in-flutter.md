@@ -29,7 +29,7 @@ The screenshot script then boots the application, loops into each supported lang
 
 <figure class="screenshot" markdown="1">
 
-![A screenshot of the folder where all the phone screenshots are created, there's a lot of them visible on screen](/images/flutter-screenshots.png)
+<img src="/images/flutter-screenshots.png" alt="A screenshot of the folder where all the phone screenshots are created, there's a lot of them visible on screen" loading="lazy" />
 
 <figcaption>All the raw captures are now generated.</figcaption>
 </figure>
@@ -72,7 +72,7 @@ And now the result we were waiting for...
 
 <figure class="screenshot" markdown="1">
 
-![An image of the phone application after adding some purple triangle background behind it. There is also now a title and a description on top. The application screen displays a list of categories along with the money spent that month on it.](/images/mavio-stats-en.png)
+<img src="/images/mavio-stats-en.png" alt="An image of the phone application after adding some purple triangle background behind it. There is also now a title and a description on top. The application screen displays a list of categories along with the money spent that month on it." loading="lazy" />
 
 <figcaption>Looks nicer isn't it?</figcaption>
 </figure>
@@ -80,7 +80,7 @@ And now the result we were waiting for...
 
 <figure class="screenshot" markdown="1">
 
-![Exactly the same screen as before, except everything is now in French instead of English.](/images/mavio-stats-fr.png)
+<img src="/images/mavio-stats-fr.png" alt="Exactly the same screen as before, except everything is now in French instead of English" loading="lazy" />
 
 <figcaption>Also works for any supported language!</figcaption>
 </figure>
@@ -152,7 +152,7 @@ A few minutes of file upload later...
 
 <figure class="screenshot" markdown="1">
 
-![An screenshot of the Google Play Store. Seven languages are displayed and there is a list of phone screenshots for the current one selected.](/images/play-store-i18n.png)
+<img src="/images/play-store-i18n.png" alt="An screenshot of the Google Play Store. Seven languages are displayed and there is a list of phone screenshots for the current one selected." loading="lazy" />
 
 <figcaption>The end result as seen on the Play Store</figcaption>
 </figure>
