@@ -28,7 +28,7 @@ Maybe you've encountered this ```cannot redirect socket on update/2``` error whi
     (stdlib 3.13.2) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
 ```
 
-This is actually easy to solve, your component just needs to have an id:
+This is actually easy to solve, your component just needs to have an **id**:
 
 ```elixir
 <%= live_component @socket, MyApp.MyComponent, id: "something" %>
