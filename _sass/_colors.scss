@@ -92,3 +92,8 @@
     --secondary-fg-color: var(--silver-300);
   }
 }
+
+
+.article-with-error-blocks .rouge-code {
+  color: red;
+}
