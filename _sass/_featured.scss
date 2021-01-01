@@ -139,9 +139,11 @@
         }
 
         .featured-image {
-          height: 200px;
-          margin-bottom: 0.5rem;
+          height: 154px;
+          margin-bottom: .6rem;
           width: 100%;
+          background-repeat: no-repeat;
+          object-fit: cover;
         }
       }
     }
