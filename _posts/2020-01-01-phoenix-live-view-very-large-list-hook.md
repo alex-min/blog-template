@@ -8,7 +8,7 @@ tags:
   - phoenix
 ---
 
-I'm building a web version of my personal finance application, for that, I've chosen to use [Phoenix Live View](https://github.com/phoenixframework/phoenix_live_view), it's the perfect tech for my use case.
+I'm currently building a web version of my personal finance application, for that, I've chosen to use [Phoenix Live View](https://github.com/phoenixframework/phoenix_live_view), it's the perfect tech for my use case.
 
 In this finance web application, you have a lot of very large lists to display like the list of transactions for example.
 Each wallet can have between 2k and 20k transactions and it's unreasonable to load everything at once. 
