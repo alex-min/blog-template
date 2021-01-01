@@ -2,7 +2,7 @@
 title: A hook for handling very large lists with Phoenix Live View
 description: 
 author: alex-min
-image: /images/phoenix.png
+image: /images/phoenix-scroll.png
 tags:
   - elixir
   - phoenix
