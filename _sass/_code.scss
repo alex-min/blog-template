@@ -108,12 +108,15 @@ code {
   .nc,
   .nd,
   .nf,
-  .nt,
   .nv,
   .vc,
   .vg,
   .vi {
     color: #d22626;
+  }
+  
+  .nt {
+    color:#b79820
   }
 
   .cp,
