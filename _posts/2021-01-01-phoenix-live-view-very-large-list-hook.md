@@ -36,7 +36,7 @@ Here is first what the live view looks like, it's pretty straightforward and doe
 
 ```eex
 <div class="bg-white flex-1 h-100 lg:block x-space-y-2 overflow-auto relative h-full"
-         id="scroll-content"
+         id="scroll-<%= @wallet.id %>"
          phx-hook="InfiniteScroll"
          data-count="<%= @records_count %>"
          data-page-size="<%= @records_per_page %>"
