@@ -22,7 +22,7 @@ I've use [Fattable.js](https://github.com/fulmicoton/fattable/) for that purpose
 
 First, here is a preview of the end result:
 
-<video src="/videos/infinitescroll.mp4" poster="/images/infinite-scroll-preview.jpg" controls>
+<video src="/videos/infinitescroll.mp4" muted autoplay loop controls>
   <p>Video preview of the infinite scrolling where I scroll anywhere and you can see the list loading as I scroll dynamically</p>
 </video>
 
