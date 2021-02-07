@@ -1,6 +1,6 @@
 ---
 title: Managing browser timezones to display dates with Phoenix Live View
-description:  Date timezones and locales
+description:  Dates, timezones and locales
 author: alex-min
 image: /images/phoenix-scroll.png
 tags:
