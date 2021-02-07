@@ -98,7 +98,7 @@ On the Live View we just retreive the timezone, either from the session or from 
 At this point you are probably thinking why I'm bothering with the session if we can send this data every time the socket is initialized? There's a very simple reason for that, Live views are rendered server side before the socket is actually connected, if we did not do that session step, the dates would simply be rendered with the wrong timezone the first time and then "corrected" once the socket is actually connected, that would be a poor user experience.
 
 
-Then I've created a simple Live view helper to modify the date according to the timezone:
+I've then created a simple Live view helper to display the date according to the timezone and the local:
 
 ```elixir
   def to_datestring(date, _locale, _timezone) when date == nil or date == "" do
