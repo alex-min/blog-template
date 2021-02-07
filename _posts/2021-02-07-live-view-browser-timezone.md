@@ -19,7 +19,7 @@ new Date().getTimezoneOffset(); // returns the timezone offset in minutes
 
 So here are the main things we need to do:
   - Send the browser timezone to the Live View
-  - Store the timezone in the session. This is needed for the server side rendering since we also want to display the right date even on the server side before the live view mounts. If we don't do this, we user is going to see the wrong date first and then the view will be re-rendered properly once the socket connects, this isn't a great UX and will look janky.
+  - Store the timezone in the session. This is needed for the server side rendering since we also want to display the right date even on the server side before the live view mounts. If we don't do this, the user is going to see the wrong date first and then the view will be re-rendered properly once the socket connects, this isn't a great UX and will look janky.
   - Retreive the timezone either from the Live socket parameters or the session depending if we're on the server side rendering. 
 
 ### Sending the timezone
