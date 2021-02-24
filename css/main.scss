@@ -143,3 +143,17 @@ pre {
 }
 
 
+.github-preview {
+  display: flex;
+  align-items: center;
+  background: var(--solarized-base2);
+  border-radius: 6px;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--slate-100);
+  border: 2px solid var(--slate-500);
+
+  img {
+    margin: 0 30px;
+  }
+}

@@ -7,6 +7,12 @@ tags:
   - elixir
   - phoenix
 ---
+
+<a class="github-preview" href="https://github.com/alex-min/phoenix-timezone-demo" target="_blank">
+  <img src="/images/github-logo-white.png" alt="Github" width="100">
+  <span>Checkout the demo project on GitHub</span>
+</a>
+
 I'm currently building a web version of my personal finance application, for that, I've chosen to use [Phoenix Live View](https://github.com/phoenixframework/phoenix_live_view), it's the perfect tech for my use case.
 
 In this finance web application, you do have a lot of dates to display such as when you actually spent the money. Users (including myself) can also travel so the dates needs to be displayed according to the current browser timezone.
