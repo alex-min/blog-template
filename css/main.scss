@@ -157,3 +157,18 @@ pre {
     margin: 0 30px;
   }
 }
+
+.thinking-elixir {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 6px;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid var(--slate-500);
+
+  img {
+    margin: 0 30px;
+  }
+}
