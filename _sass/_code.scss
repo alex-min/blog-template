@@ -41,6 +41,10 @@ div.highlighter-rouge:after {
   border-bottom: 3px  solid var(--code-border);
 }
 
+div.highlighter-rouge {
+  font-size: 1.2em;
+}
+
 .highlighter-rouge {
   margin: 4em auto;
   text-align: center;
