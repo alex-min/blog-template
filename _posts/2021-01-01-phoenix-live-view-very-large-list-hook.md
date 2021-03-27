@@ -67,8 +67,7 @@ Here is first what the live view looks like, it's pretty straightforward and doe
       <div class="animate-pulse rounded p-5 bg-white" style="height: <%= @row_height %>px">
            <div class="flex space-x-3">
 
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-2 icon-receipt"><path class="primary" d="M9 18.41l-2.3 2.3a1 1 0 0 1-1.4 0l-2-2A1 1 0 0 1 3 18V5c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v13a1 1 0 0 1-.3.7l-2 2a1 1 0 0 1-1.4 0L15 18.42l-2.3 2.3a1 1 0 0 1-1.4 0L9 18.4z"></path><path class="secondary" d="M7 7h10a1 1 0 0 1 0 2H7a1 1 0 1 1 0-2zm0 4h10a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2z"></path>
-              </svg>
+              <img src="/images/loading-icon.svg">
               <div class="flex flex-col w-56">
                 <div class="h-4 bg-blue-100 rounded mb-1"></div>
                 <div class="h-4 bg-blue-100 rounded w-5/6"></div>
@@ -262,4 +261,4 @@ Some additional explanation:
 - We return a list of each record rendered into HTML, the hook is then using that to replace the loading blocks.
 
 
-And here you go! We can create a list of 20k records without slowing down the browser and the page load!
+And here you go! We can create a list of 20k records without slowing down the browser and the pageload!

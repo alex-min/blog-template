@@ -45,20 +45,22 @@ layout: default
 </div>
 
 
-<div id="commento"></div>
+<div class="bottom-page">
+  <div id="commento"></div>
 
-{% include license.html %}
-{% include social.html %}
+  {% include license.html %}
+  {% include social.html %}
 
-{% if page.next %}
-<h2 class="up-next">Up Next</h2>
-{% unless page.next.hidden %}
-{% include featured.html post=page.next %}
-{% endunless %}
-{% endif %}
+  {% if page.next %}
+  <h2 class="up-next">Up Next</h2>
+  {% unless page.next.hidden %}
+  {% include featured.html post=page.next %}
+  {% endunless %}
+  {% endif %}
 
-{% if page.previous %}
-{% unless page.previous.hidden %}
-{% include featured.html post=page.previous %}
-{% endunless %}
-{% endif %}
+  {% if page.previous %}
+  {% unless page.previous.hidden %}
+  {% include featured.html post=page.previous %}
+  {% endunless %}
+  {% endif %}
+</div>

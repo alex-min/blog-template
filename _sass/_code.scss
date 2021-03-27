@@ -2,21 +2,106 @@
 // Adapted from https://gist.github.com/nicolashery/5765395
 
 code {
-  background-color: var(--secondary-bg-color);
   border-radius: 0.25em;
   font-size: 0.85em;
   padding: 0.2em;
+  background-color: #272822;
+  color: white;
+}
+
+// inline code
+code.highlighter-rouge {
+  background-color: #675bb9;
+}
+
+
+div.highlighter-rouge:before {
+  content: "";
+  background: #272822;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  transform: rotate(-2.2deg);
+  z-index: 2;
+  right: -5px;
+  border-top: 3px solid var(--code-border);
+}
+
+
+div.highlighter-rouge:after {
+  content: "";
+  background: #272822;
+  bottom: 0;
+  left: -5px;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  transform: rotate(1deg);
+  z-index: 1;
+  border-bottom: 3px  solid var(--code-border);
 }
 
 .highlighter-rouge {
-  margin: 2em auto;
+  margin: 4em auto;
   text-align: center;
+  position: relative;
+
+  
+
+  pre.highlight {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  pre {
+    white-space: pre-wrap;
+  }
 
   > .highlight {
     border-radius: 0.25em;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.22);
+    //box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.22);
     line-height: 1;
     max-width: 100%;
+    width: 100%;
+    border-top: 3px solid var(--code-border);
+
+    > .highlight, code {
+      z-index: 2;
+    }
+
+    &:before {
+        content: "";
+        background: #272822;
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        transform: rotate(2.2deg);
+        z-index: 2;
+        left: -5px;
+        border-top: 3px solid var(--code-border);
+    }
+
+
+    &:after {
+      content: "";
+      background: #272822;
+      bottom: 0;
+      left: -5px;
+      height: 100px;
+      width: 100%;
+      position: absolute;
+      transform: rotate(-2.2deg);
+      z-index: 1;
+      border-bottom: 3px  solid var(--code-border);
+    }
+  }
+
+  .rouge-gutter.gl {
+    display: none;
+    .lineno {
+      color: var(--solarized-base1);
+    }
   }
 }
 
@@ -28,6 +113,10 @@ code {
   table {
     border-spacing: 0;
     margin: auto;
+  }
+  
+  .cm {
+    font-weight: bold;
   }
 }
 
@@ -45,6 +134,7 @@ code {
   text-align: left;
   background-color: var(--solarized-base3);
   color: var(--solarized-base01);
+  display: flex;
 
   .gl {
     background-color: var(--solarized-base2);

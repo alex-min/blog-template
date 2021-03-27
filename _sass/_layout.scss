@@ -1,12 +1,21 @@
 :root {
-  --page-width: 60rem;
-  --content-width: 40rem;
+  --page-width: 100%;
+  --content-width: 42rem;
+}
+
+.bottom-page, .latest, .more {
+  max-width: 65rem;
+  margin: 0 auto;
 }
 
 body > section {
   margin: 0 auto;
   max-width: var(--page-width);
-  padding: 0 1rem;
+
+  p, h1, h2, h3, h4, h5, h6, video, img {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 body > footer {

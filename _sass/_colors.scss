@@ -81,10 +81,13 @@
   --secondary-fg-color: var(--black-300);
   --warning-bg-color: var(--banana-300);
   --warning-fg-color: var(--black-900);
+  
+  --code-border: #d986cc;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --code-border: #131517;
     --bg-color: var(--black-700);
     --fg-color: var(--silver-300);
     --accent-color: var(--blueberry-300);

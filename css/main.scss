@@ -74,6 +74,14 @@ nav.pagination {
   }
 }
 
+h2 {
+  color: #314c80;
+  
+  @media (prefers-color-scheme: dark) {
+    color: #6a95e8
+  }
+}
+
 .social {
   font-size: 0; // Fix percentage issue with whitespace
   margin: 4rem auto;
@@ -163,6 +171,7 @@ pre {
 
   img {
     margin: 0 30px;
+    padding: 0;
   }
 }
 

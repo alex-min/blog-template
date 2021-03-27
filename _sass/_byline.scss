@@ -4,6 +4,7 @@
   line-height: 1.5em;
   margin: 1.5em auto;
   max-width: var(--content-width);
+  padding: 0 20px;
 
   .avatar {
     background-color: var(--slate-500);
@@ -17,6 +18,10 @@
     position: relative;
     vertical-align: middle;
     width: 48px;
+
+    img {
+      padding: 0;
+    }
 
     &::before {
       content: "";
