@@ -175,6 +175,12 @@ pre {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .dark-mode-inverted {
+    filter: invert(1) hue-rotate(180deg)
+  }
+}
+
 .thinking-elixir {
   display: flex;
   align-items: center;
