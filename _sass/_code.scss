@@ -5,7 +5,7 @@ code {
   border-radius: 0.25em;
   font-size: 0.85em;
   padding: 0.2em;
-  background-color: #272822;
+  background-color: var(--code-color);
   color: white;
 }
 
@@ -17,7 +17,7 @@ code.highlighter-rouge {
 
 div.highlighter-rouge:before {
   content: "";
-  background: #272822;
+  background: var(--code-color);
   height: 100px;
   width: 100%;
   position: absolute;
@@ -30,7 +30,7 @@ div.highlighter-rouge:before {
 
 div.highlighter-rouge:after {
   content: "";
-  background: #272822;
+  background: var(--code-color);
   bottom: 0;
   left: -5px;
   height: 100px;
@@ -75,7 +75,7 @@ div.highlighter-rouge:after {
 
     &:before {
         content: "";
-        background: #272822;
+        background: var(--code-color);
         height: 100px;
         width: 100%;
         position: absolute;
@@ -88,7 +88,7 @@ div.highlighter-rouge:after {
 
     &:after {
       content: "";
-      background: #272822;
+      background: var(--code-color);
       bottom: 0;
       left: -5px;
       height: 100px;
@@ -135,7 +135,7 @@ div.highlighter-rouge:after {
   margin: auto;
   overflow: auto;
   text-align: left;
-  background-color: var(--solarized-base3);
+  background-color: var(--code-color);
   color: var(--solarized-base01);
   display: flex;
 

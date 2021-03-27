@@ -83,10 +83,12 @@
   --warning-fg-color: var(--black-900);
   
   --code-border: #d986cc;
+  --code-color: #2e3035;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --code-color: #272822;
     --code-border: #131517;
     --bg-color: var(--black-700);
     --fg-color: var(--silver-300);
