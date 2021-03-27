@@ -62,10 +62,8 @@ div.highlighter-rouge {
     display: flex;
     align-items: center;
 
-    @media (max-width: 1000px) {
-      code {
-        max-width: 500px;
-      }
+    @media (max-width: 1200px) {
+      justify-content: initial;
     }
   }
 
