@@ -61,15 +61,46 @@ defmodule CarteLimite.Application do
   #...
   def start(_type, _args) do
     children = [
-       CarteLimite.Repo,
-       #...
+      CarteLimite.Repo,
+      #...
+      CarteLimiteWeb.GameSupervisor,
       {Registry, keys: :unique, name: GameRegistry}
     ]
   end
 end
 ```
 
-Each game will have a unique id associated with 
+Each game will have a unique id associated with it and this public id will be used in the url to access the game. There's no authentication planned here, if you have the public url, you end up on the lobby.
 
+
+```elixir
+# lib/carte_limite_web/controllers/new_game_controller.ex
+defmodule CarteLimiteWeb.NewGameController do
+  use CarteLimiteWeb, :controller
+
+  def index(socket, _) do
+    id = CarteLimiteWeb.GameSupervisor.spawn_game()
+    socket |> redirect(to: "/game/#{id}")
+  end
+end
+
+# lib/carte_limite_web/game_supervisor.ex
+defmodule CarteLimiteWeb.GameSupervisor do
+  use Supervisor
+
+  #...
+  
+  def spawn_game() do
+    id = random_string(20)
+
+    Supervisor.start_child(__MODULE__, %{
+      id: id,
+      start: {GameServer, :start_link, [[id]]}
+    })
+
+    id
+  end
+end
+```
 
 
