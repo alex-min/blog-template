@@ -43,6 +43,8 @@ div.highlighter-rouge:after {
 
 div.highlighter-rouge {
   font-size: 1.2em;
+
+
 }
 
 .highlighter-rouge {
@@ -59,11 +61,14 @@ div.highlighter-rouge {
     min-height: 110px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 1000px) {
+      code {
+        max-width: 500px;
+      }
+    }
   }
 
-  pre {
-    white-space: pre-wrap;
-  }
 
   > .highlight {
     border-radius: 0.25em;
@@ -72,6 +77,7 @@ div.highlighter-rouge {
     max-width: 100%;
     width: 100%;
     border-top: 3px solid var(--code-border);
+
 
     > .highlight, code {
       z-index: 2;
