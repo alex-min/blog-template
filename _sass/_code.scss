@@ -21,10 +21,11 @@ div.highlighter-rouge:before {
   height: 100px;
   width: 100%;
   position: absolute;
-  transform: rotate(-2.2deg);
+  transform: rotate(-1.2deg);
   z-index: 2;
   right: -5px;
   border-top: 3px solid var(--code-border);
+   //display: none;
 }
 
 
@@ -39,6 +40,7 @@ div.highlighter-rouge:after {
   transform: rotate(1deg);
   z-index: 1;
   border-bottom: 3px  solid var(--code-border);
+   //display: none;
 }
 
 div.highlighter-rouge {
@@ -87,10 +89,11 @@ div.highlighter-rouge {
         height: 100px;
         width: 100%;
         position: absolute;
-        transform: rotate(2.2deg);
+        transform: rotate(1.2deg);
         z-index: 2;
         left: -5px;
         border-top: 3px solid var(--code-border);
+        //display: none;
     }
 
 
@@ -102,9 +105,11 @@ div.highlighter-rouge {
       height: 100px;
       width: 100%;
       position: absolute;
-      transform: rotate(-2.2deg);
+      transform: rotate(-1.2deg);
       z-index: 1;
       border-bottom: 3px  solid var(--code-border);
+       //display: none;
+
     }
   }
 
