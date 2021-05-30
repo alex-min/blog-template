@@ -2,7 +2,7 @@
 title: "Opensourcing my battery-included Phoenix boilerplate!"
 description:  ExPlatform goes live!
 author: alex-min
-image: /images/thinking-elixir-cover.png
+image: /images/phoenix.png
 tags:
   - elixir
   - phoenix
