@@ -1,5 +1,5 @@
 ---
-title: "Opensourcing my battery-included Phoenix boilerplate!"
+title: "Open-sourcing my battery-included Phoenix boilerplate!"
 description:  ExPlatform goes live!
 author: alex-min
 image: /images/phoenix.png
