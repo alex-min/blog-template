@@ -6,6 +6,7 @@ image: /images/thinking-elixir-cover.png
 tags:
   - elixir
   - phoenix
+  - podcast
 ---
 
 I've participated to the Thinking Elixir podcast with [Mark Ericksen](https://twitter.com/brainlid), [David Bernheise](https://twitter.com/bernheisel) and [Cade Ward](https://twitter.com/cadebward).

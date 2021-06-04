@@ -2,7 +2,7 @@
 ---
 # Tags
 
-<section class="tag-list">
+<section class="tag-list" style="max-width: 1000px; margin: 0 auto">
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
   {% if tag[0].size > 1 %}
