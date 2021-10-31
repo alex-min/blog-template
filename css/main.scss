@@ -137,27 +137,6 @@ pre {
   background: var(--bg-color) !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  .commento-root textarea#commento-textarea-root {
-    height: 128px;
-    background: #272822;
-    border: 1px solid #555573;
-    color: white;
-  }
-
-  .commento-root .commento-card {
-    border-top: 1px solid #6a6a6a !important
-  }
-
-  .commento-name, .commento-root .commento-card .commento-name {
-    color: #b0b0b0 !important
-  }
-}
-
-.commento-root-font * {
-  font-family: var(--ui-font) !important;
-}
-
 
 .github-preview {
   display: flex;
