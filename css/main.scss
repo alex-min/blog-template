@@ -82,6 +82,12 @@ h2 {
   }
 }
 
+header h2 {
+  @media (prefers-color-scheme: dark) {
+    color: #c2cee6
+  }
+}
+
 .social {
   font-size: 0; // Fix percentage issue with whitespace
   margin: 4rem auto;
