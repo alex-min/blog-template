@@ -3,16 +3,61 @@
   --content-width: 42rem;
 }
 
-.bottom-page, .latest, .more {
+#mc_embed_signup {
+  background: #fff3f3;
+  font-size: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#mc_embed_signup_scroll h2 {
+  display: inline-block !important;
+}
+
+#mc_embed_signup_scroll .indicates-required {
+  float: right;
+}
+
+#mc-embedded-subscribe {
+  background: #4242a4 !important;
+  color: white !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  #mc_embed_signup {
+    background: #3c3838;
+  }
+
+  #mc_embed_signup .mce_inline_error,
+  #mce-EMAIL-HELPERTEXT {
+    background: #3c3838 !important;
+  }
+
+  #mc-embedded-subscribe {
+    background: #4242a4 !important;
+    color: white !important;
+  }
+}
+
+.bottom-page,
+.latest,
+.more {
   max-width: 65rem;
   margin: 0 auto;
 }
 
-body > section {
+body>section {
   margin: 0 auto;
   max-width: var(--page-width);
 
-  p, h1, h2, h3, h4, h5, h6, video {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  video {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -23,7 +68,7 @@ body > section {
   }
 }
 
-body > footer {
+body>footer {
   background-color: var(--secondary-bg-color);
   display: flex;
   flex-flow: wrap-reverse;
@@ -72,7 +117,8 @@ article {
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  .article-block {
     margin-left: auto;
     margin-right: auto;
     max-width: var(--content-width);
@@ -88,7 +134,7 @@ article {
     max-height: 550px;
   }
 
-  > table {
+  >table {
     font-family: var(--ui-font);
     margin: 2em auto;
     max-width: 100%;

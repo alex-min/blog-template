@@ -14,8 +14,8 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="apple-touch-icon" href="/images/launcher-icons/apple-touch-icon.png">
 
-  <link rel="alternate" type="application/rss+xml" title="Alex-min Blog"
-    href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/rss+xml" title="Alex-min Blog" href="{{ " /feed.xml" | prepend: site.baseurl |
+    prepend: site.url }}" />
 
   <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author }}{% endif %}" />
   <meta name="theme-color"
@@ -49,5 +49,8 @@
     content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 
 
-  <link rel="stylesheet" type="text/css" media="all" href="{{ '/css/main.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
+  <link rel="stylesheet" type="text/css" media="all"
+    href="{{ '/css/main.css' | prepend: site.baseurl | append: '?v=' | append: site.time }}" />
+
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
 </head>
